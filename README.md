@@ -25,3 +25,13 @@ std::vector<int> num = {1,2,3,4,5};
 يقلل من سعة الحاوية لتناسب حجمها ويدمر جميع العناصر التي تتجاوز سعتها.
 7.	reserve() – Requests that the vector capacity be at least enough to contain n elements.
 ```
+
+## Element access
+```md
+1.	reference operator [g] – Returns a reference to the element at position ‘g’ in the vector
+2.	at(g) – Returns a reference to the element at position ‘g’ in the vector
+3.	front() – Returns a reference to the first element in the vector
+4.	back() – Returns a reference to the last element in the vector
+5.	data() – Returns a direct pointer to the memory array used internally by the vector to store its owned elements.
+يُرجع مؤشرًا مباشرًا إلى مصفوفة الذاكرة المستخدمة داخليًا بواسطة المتجه لتخزين العناصر المملوكة له
+```
