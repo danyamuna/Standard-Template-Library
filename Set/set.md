@@ -10,34 +10,33 @@ Cannot be accessed by index numbers, because the order is based on sorting and n
 
 ## Iterator
 ```md
-set::begin() function is used to return an iterator pointing to the first element of the set container. begin() function returns a bidirectional iterator to the first element of the container.
-set::end() It returns an iterator pointing to past the last element of the set container. Since it does not refer to a valid element, it cannot de-referenced end() function returns a bidirectional iterator.
-set::rbegin() is  which returns a reverse iterator pointing to the last element in the container.
-set::rend() in an inbuilt function in C++ STL which returns a reverse iterator pointing
+*-set::begin() function is used to return an iterator pointing to the first element of the set container. begin() function returns a bidirectional iterator to the first element of the container.
+*-set::end() It returns an iterator pointing to past the last element of the set container. Since it does not refer to a valid element, it cannot de-referenced end() function returns a bidirectional iterator.
+*-set::rbegin() is  which returns a reverse iterator pointing to the last element in the container.
+*-set::rend() in an inbuilt function in C++ STL which returns a reverse iterator pointing
  to the theoretical element right before the first element in the set container.
-The set::crbegin() is a built-in function in C++ STL which returns a constant iterator pointing to the last element in the container. The iterator cannot be used to modify the elements in the set container.
+*-set::crbegin() is a built-in function in C++ STL which returns a constant iterator pointing to the last element in the container. The iterator cannot be used to modify the elements in the set container.
  The iterators can be increased or decreased to traverse the set accordingly.
-The set::crend() is a built-in function in C++ STL which returns a constant iterator pointing to the position just before the first element in the container. The iterator cannot be used to modify the elements in the set container.
+*-set::crend() is a built-in function in C++ STL which returns a constant iterator pointing to the position just before the first element in the container. The iterator cannot be used to modify the elements in the set container.
 The iterators can be increased or decreased to traverse the set accordingly.
-The set::cbegin() is a built-in function in C++ STL which returns a constant iterator pointing to the first element in the container. The iterator cannot be used to modify the elements in the set container.
+*-set::cbegin() is a built-in function in C++ STL which returns a constant iterator pointing to the first element in the container. The iterator cannot be used to modify the elements in the set container.
 The iterators can be increased or decreased to traverse the set accordingly.
-set::cend() is a built-in function in C++ STL which returns a constant iterator pointing to the position past the last element in the container. The iterator cannot be used to modify the elements in the set container.
+*-set::cend() is a built-in function in C++ STL which returns a constant iterator pointing to the position past the last element in the container. The iterator cannot be used to modify the elements in the set container.
 The iterators can be increased or decreased to traverse in the set accordingly.
 ```
 ## Capacity
 ```md
-size()< function is used to return the size of the set container or the number of elements in the set container.
-max_size() is a built-in function in C++ STL which returns the maximum number of elements a set container can hold.
-empty() function is used to check if the set container is empty or not.
+*-size()< function is used to return the size of the set container or the number of elements in the set container.
+*-max_size() is a built-in function in C++ STL which returns the maximum number of elements a set container can hold.
+*-empty() function is used to check if the set container is empty or not.
 ```
 ## Modifier
 ```md
-insert is a built-in function in C++ STL which insert elements in the set container or inserts the elements from a position to another position in the set to a different set.
-emplace() This function is used to insert a new element into the set container, only if the element to be inserted is unique and does not already exists in the set.
-emplace_hint() is a built-in function in C++ STL which inserts a new element in the set. A position is passed in the parameter of the function which acts as a hint from where the searching operation starts before inserting the element at its current position. The position only helps the process to get faster, it does not decide where the new element is to be inserted. The new element is inserted following the property of the set container only.
-
-
-
+*-insert is a built-in function in C++ STL which insert elements in the set container or inserts the elements from a position to another position in the set to a different set.
+*-emplace() This function is used to insert a new element into the set container, only if the element to be inserted is unique and does not already exists in the set.
+*-emplace_hint() is a built-in function in C++ STL which inserts a new element in the set. A position is passed in the parameter of the function which acts as a hint from where the searching operation starts before inserting the element at its current position. The position only helps the process to get faster, it does not decide where the new element is to be inserted. The new element is inserted following the property of the set container only.
+*-swap()
+This function is used to exchange the contents of two sets but the sets must be of same type, although sizes may differ
 ```
 ```md
 key_comp() is an inbuilt function in C++ STL which returns a copy of the comparison object used by the container.This object determines the order of the elements in the container
@@ -49,3 +48,25 @@ lower_bound() is a built-in function in C++ STL which returns an iterator pointi
 upper_bound() is a built-in function in C++ STL which returns an iterator pointing to the immediate next element which is just greater than k. If the key passed in the parameter exceeds the maximum key in the container, then the iterator returned points to next of last element (which can be identified using set end() function) in the set container.
 equal_range() is a built-in function in C++ STL which returns an iterator of pairs. The pair refers to the range that includes all the elements in the container which have a key equivalent to k
 ```
+## set operator= in C++ STL
+The ‘=’ is an operator in C++ STL which copies (or moves) a set to another set and set::operator= is the corresponding operator function. 
+1.	The first version takes reference of an set as an argument and copies it to an set.
+Syntax:
+ums1.operator=(set &set2)
+Parameters: The first version takes the reference of an set as argument.
+2.	The second version performs a move assignment i.e it moves the content of an set to another set.
+Syntax:
+ums1.operator=(set &&set2)
+Parameters: The second version takes the r-value reference of an set as argument
+3.	The third version assigns contents of an initializer list to an set.
+Syntax:
+ums1.operator=(initializer list)
+Parameters: The third version takes an initializer list as argument.
+Return Value: All of them return the value of this pointer(*this).
+
+## set get_allocator() in C++ STL
+The set::get_allocator() in C++ STL is an in-built function which returns the copy of the allocator object associated with the set.
+Parameters: This function does not accept any parameters.
+
+Return Value: This function returns the allocator associated with the set.
+
